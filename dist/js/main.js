@@ -13,23 +13,32 @@ let showMenu = false;
 menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
-    if (!showMenu) {
-        menuBtn.classList.add('close');
-        menu.classList.add('show');
-        menuNav.classList.add('show');
-        menuBranding.classList.add('show');
-        navItems.forEach(item => item.classList.add('show'));
+    menuBtn.classList.toggle('close');
+    menu.classList.toggle('show');
+    menuNav.classList.toggle('show');
+    menuBranding.classList.toggle('show');
+    navItems.forEach(item => item.classList.toggle('show'));
+    showMenu = !showMenu;
 
-        // set menu state
-        showMenu = true;
-    } else {
-        menuBtn.classList.remove('close');
-        menu.classList.remove('show');
-        menuNav.classList.remove('show');
-        menuBranding.classList.remove('show');
-        navItems.forEach(item => item.classList.remove('show'));
+    // Old code
+    // for menu button:
+    // if (!showMenu) {
+    //     menuBtn.classList.add('close');
+    //     menu.classList.add('show');
+    //     menuNav.classList.add('show');
+    //     menuBranding.classList.add('show');
+    //     navItems.forEach(item => item.classList.add('show'));
 
-        // set menu state
-        showMenu = false;
-    }
+    //     // set menu state
+    //     showMenu = true;
+    // } else {
+    //     menuBtn.classList.remove('close');
+    //     menu.classList.remove('show');
+    //     menuNav.classList.remove('show');
+    //     menuBranding.classList.remove('show');
+    //     navItems.forEach(item => item.classList.remove('show'));
+
+    //     // set menu state
+    //     showMenu = false;
+    // }
 }
