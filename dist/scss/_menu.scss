@@ -66,7 +66,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    // opacity: 0.9;
     visibility: hidden;
 
     &.show {
@@ -112,13 +112,13 @@
 
         .my-image {
             // padding: 0.2rem 1rem;
-
-            width: inherit;
-            height: 350px;
+            // opacity: 1;
+            width: 400px;
+            height: 600px;
             background: url(../images/me-adams-BW-smallsized.jpg);
             background-size: cover;
             border-radius: 10%;
-            border: solid 3px $secondary-color;
+            border: solid 3px $border-color;
         }
     }
 
@@ -155,7 +155,7 @@
     }
 }
 
-// delay the nav item slides by .1s using this new syntax for a for loop
+// delay the nav item slides by .1s using this new (to me) syntax for a for loop
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.1s;

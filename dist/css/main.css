@@ -35,7 +35,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -64,19 +63,19 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .my-image {
-      width: inherit;
-      height: 350px;
+      width: 400px;
+      height: 600px;
       background: url(../images/me-adams-BW-smallsized.jpg);
       background-size: cover;
       border-radius: 10%;
-      border: solid 3px #DC7726; }
+      border: solid 3px #004D3A; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.7s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #DC7726; }
+      color: #FF6501; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -88,7 +87,7 @@
     text-decoration: none;
     transition: all 0.7s ease-out; }
     .menu .nav-link:hover {
-      color: #DC7726; }
+      color: #FF6501; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -149,6 +148,9 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(13, 14, 68, 0.5); }
 
+.small-text {
+  font-size: .9em; }
+
 a {
   color: #F5F7ED;
   text-decoration: none; }
@@ -159,7 +161,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #DC7726; }
+  color: #FF6501; }
 
 main {
   padding: 4rem;
@@ -188,7 +190,7 @@ main {
   height: 300px;
   margin: auto;
   border-radius: 20%;
-  border: #DC7726 3px solid; }
+  border: #004D3A 3px solid; }
 
 .bio {
   grid-area: bio;
@@ -206,14 +208,22 @@ main {
 .job {
   background: #0f1050;
   padding: 0.5rem;
-  border-left: #DC7726 5px solid; }
+  border-left: #FF6501 5px solid; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background-color: #481D01;
+  background-color: #3b1800;
   color: #F5F7ED;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .my-image {
+    width: -webkit-fill-available; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .my-image {
+    width: -webkit-fill-available; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -238,6 +248,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .my-image {
+      width: -webkit-fill-available;
       background: url(../images/me-adams-BW-smallest.jpg);
       background-repeat: no-repeat;
       width: 200px;
