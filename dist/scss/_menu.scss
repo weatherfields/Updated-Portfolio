@@ -82,6 +82,83 @@
         float: left;
         width: 50%;
         height: 100vh;
-        overflow: hidden;
+        overflow: hidden; // gets rid of scroll bars
     }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        list-style: none; // no bullet points
+        transform: translate3d(0, -100%, 0); // have darker overlay come in from top (overlay with links).
+        @include easeOut;
+
+        &.show {
+            //slide in from top
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    // branding side
+    &-branding {
+        background: $primary-color;
+        @include easeOut;
+        transform: translate3d(0, 100%, 0);
+
+        &.show {
+            //slide in from bottom
+            transform: translate3d(0, 0, 0);
+        }
+
+        .my-image {
+            opacity: 1;
+            width: inherit;
+            height: 350px;
+            background: url(../images/me-adams-BW-smallsized.jpg);
+            background-size: cover;
+            border-radius: 10%;
+            border: solid 3px $secondary-color;
+        }
+    }
+
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+
+        &.show {
+            //slide in from the right
+            transform: translate3d(0, 0, 0);
+        }
+
+        // color link
+        &.current>a {
+            color: $secondary-color;
+        }
+
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        @include easeOut;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+// delay the nav item slides by .1s using this new syntax for a for loop
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+    }
+
+    // avoids errors
 }
