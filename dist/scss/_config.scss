@@ -26,6 +26,8 @@ $background-opacity: 0.9;
             background-size: contain;
             background-repeat: no-repeat;
 
+            background-position: center;
+
             &:after {
                 content: '';
                 position: absolute;

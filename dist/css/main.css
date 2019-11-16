@@ -117,7 +117,8 @@ body {
     background-color: #000;
     background-attachment: fixed;
     background-size: contain;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-position: center; }
     body#bg-img:after {
       content: '';
       position: absolute;
