@@ -1,5 +1,9 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+// $primary-color: rgb(12, 55, 112);
+// $primary-color: #050A30;
+$primary-color: rgb(11, 12, 59);
+// $secondary-color: #eece1a;
+// $secondary-color: #FF8300;
+$secondary-color: #DC7726;
 $show-home-image: true;
 $home-image: url(../images/background.jpg);
 $background-opacity: 0.9;
@@ -17,8 +21,10 @@ $background-opacity: 0.9;
     @if $show-home-image {
         &#bg-img {
             background: $home-image;
+            background-color: #000;
             background-attachment: fixed;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
 
             &:after {
                 content: '';
@@ -31,6 +37,18 @@ $background-opacity: 0.9;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+// text color funcitno
+// this will prevent text from being unreadable if I use certain background colors, etc
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    }
+
+    @else {
+        @return #F5F7ED;
     }
 }
 

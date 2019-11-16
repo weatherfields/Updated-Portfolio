@@ -13,7 +13,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #F5F7ED;
     transition: all 0.7s ease-out; }
     .menu-btn .btn-line:nth-child(4) {
       opacity: 0; }
@@ -51,33 +51,32 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #070826;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.7s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #0b0c3b;
     transition: all 0.7s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .my-image {
-      opacity: 1;
       width: inherit;
       height: 350px;
       background: url(../images/me-adams-BW-smallsized.jpg);
       background-size: cover;
       border-radius: 10%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #DC7726; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.7s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #DC7726; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -85,11 +84,11 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: #F5F7ED;
     text-decoration: none;
     transition: all 0.7s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #DC7726; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -102,6 +101,118 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #0b0c3b;
+  color: #F5F7ED;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../images/background.jpg);
+    background-color: #000;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    body#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(11, 12, 59, 0.9); }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1#my-name,
+  h2#my-name,
+  h3#my-name {
+    font-family: Besom; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(13, 14, 68, 0.5); }
+
+a {
+  color: #F5F7ED;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #DC7726; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem;
+      transition: all 0.7s ease-out; }
+      main .icons a:hover {
+        color: #ECC046; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  /* create space between */
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  height: 300px;
+  margin: auto;
+  border-radius: 20%;
+  border: #DC7726 3px solid; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
+
+.job {
+  background: #0f1050;
+  padding: 0.5rem;
+  border-left: #DC7726 5px solid; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #481D01;
+  color: #F5F7ED;
+  height: 60px; }
 
 @media screen and (max-width: 768px) {
   main {
@@ -129,79 +240,11 @@
       background: url(../images/me-adams-BW-smallest.jpg);
       background-repeat: no-repeat;
       width: 200px;
-      height: 200px; } }
+      height: 200px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 480px) {
   main#home h1 {
     margin-top: 10vh; } }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  background: #444;
-  color: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
-  body#bg-img {
-    background: url(../images/background.jpg);
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-img:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400; }
-  h1#my-name,
-  h2#my-name,
-  h3#my-name {
-    font-family: Besom; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 6rem; }
-  h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
-
-a {
-  color: #fff;
-  text-decoration: none; }
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
-
-.text-secondary {
-  color: #eece1a; }
-
-main {
-  padding: 4rem;
-  min-height: calc(100vh - 60px); }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem;
-      transition: all 0.7s ease-out; }
-      main .icons a:hover {
-        color: #eece1a; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }

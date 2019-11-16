@@ -11,7 +11,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include easeOut;
 
         &:nth-child(4) {
@@ -111,7 +111,8 @@
         }
 
         .my-image {
-            opacity: 1;
+            // padding: 0.2rem 1rem;
+
             width: inherit;
             height: 350px;
             background: url(../images/me-adams-BW-smallsized.jpg);
@@ -144,7 +145,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color: #fff;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 
