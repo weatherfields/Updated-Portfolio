@@ -64,7 +64,7 @@
       transform: translate3d(0, 0, 0); }
     .menu-branding .my-image {
       width: 400px;
-      height: 600px;
+      height: 400px;
       background: url(../images/me-adams-BW-smallsized.jpg);
       background-size: cover;
       border-radius: 10%;
@@ -133,14 +133,10 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400; }
-  h1#my-name,
-  h2#my-name,
-  h3#my-name {
-    font-family: Besom; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 4.9rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -210,6 +206,11 @@ main {
   padding: 0.5rem;
   border-left: #FF6501 5px solid; }
 
+#redface {
+  width: 20vh;
+  border: 3px #F5F7ED solid;
+  border-radius: 15%; }
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -221,6 +222,29 @@ main {
     .projects img:hover {
       border-color: #FF6501;
       transition: all 0.7s ease-out; }
+
+.box-inputs {
+  color: #FF6501; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #F5F7ED solid;
+    border-radius: 50%;
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+    transition: all 0.7s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #FF6501;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: inline-block;
@@ -239,6 +263,12 @@ main {
 .btn-light {
   background-color: #004D3A;
   color: #F5F7ED; }
+
+.form {
+  max-width: 33.33%;
+  background-color: #121462;
+  padding: 20px;
+  border: 1px #FF6501 solid; }
 
 #main-footer {
   text-align: center;

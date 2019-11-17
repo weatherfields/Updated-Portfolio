@@ -23,12 +23,8 @@ h3 {
   margin: 0;
   font-weight: 400;
 
-  &#my-name {
-    font-family: Besom;
-  }
-
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 4.9rem;
   }
 
   &.sm-heading {
@@ -130,6 +126,28 @@ main {
 
 // Portfolio stuff
 
+// .my-name {
+//   display: flex;
+//   // flex-wrap: wrap;
+//   justify-content: space-evenly;
+//   align-items: center;
+// }
+
+// #hr-portfolio {
+//   color: #F5F7ED;
+// }
+
+// #my-port-text {
+//   justify-content: left;
+// }
+
+#redface {
+  width: 20vh;
+  border: 3px #F5F7ED solid;
+  border-radius: 15%;
+
+}
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -145,6 +163,42 @@ main {
       // opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
+    }
+  }
+
+}
+
+// contact page
+.box-inputs {
+  color: $secondary-color;
+}
+
+.boxes {
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px #F5F7ED solid;
+    border-radius: 50%;
+    ;
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
   }
 
@@ -176,6 +230,64 @@ main {
   background-color: $border-color;
   color: #F5F7ED;
 }
+
+// contact page 
+.form {
+  max-width: 33.33%;
+  background-color: rgba(lighten($primary-color, 9), 2);
+  padding: 20px;
+  border: 1px $secondary-color solid;
+}
+
+// contact form 
+// #form-text {
+//   color: $secondary-color;
+// }
+
+// #contacttext {
+//   text-align: left;
+//   color: #4aaaa5;
+// }
+
+// #message {
+//   height: 10vh;
+//   margin-bottom: 10px;
+//   width: 100%
+// }
+
+// // #email {
+// //   margin-bottom: 10px;
+// //   width: 100%
+// // }
+
+// #name,
+// #email {
+//   margin-bottom: 10px;
+//   width: 100%;
+// }
+
+// #contactform {
+//   box-shadow: 0px 0px 9px 3px #777777;
+//   background: #ffffff;
+//   overflow: hidden;
+//   padding: 50px;
+// }
+
+// #submit {
+//   color: #fff;
+//   width: 70px;
+//   height: 30px;
+//   background: #4aaaa5;
+//   border: none;
+//   margin-top: 5px;
+//   border-radius: 2px;
+//   font-size: 13px;
+// }
+
+// #submit:hover {
+//   cursor: pointer;
+//   background-color: #db9936;
+// }
 
 #main-footer {
   text-align: center;
