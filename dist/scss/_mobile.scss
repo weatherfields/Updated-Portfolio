@@ -1,5 +1,9 @@
 // wide screens
 @include mediaXl {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     .my-image {
         width: -webkit-fill-available;
     }
@@ -7,6 +11,10 @@
 
 // Desktops / Laps
 @include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .my-image {
         width: -webkit-fill-available;
     }
@@ -14,6 +22,7 @@
 
 // Tablets / sm laps
 @include mediaMd {
+
     main {
         align-items: center;
         text-align: center;
@@ -64,10 +73,20 @@
             'job3';
         grid-template-columns: 1fr; // was 3 fr but want them stacked 
     }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // phones
 @include mediaSm {
+
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
     main#home h1 {
         margin-top: 10vh;
     }

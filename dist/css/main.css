@@ -87,7 +87,7 @@
     text-decoration: none;
     transition: all 0.7s ease-out; }
     .menu .nav-link:hover {
-      color: #FF6501; }
+      color: #04c55b; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -172,7 +172,7 @@ main {
       padding: 0.4rem;
       transition: all 0.7s ease-out; }
       main .icons a:hover {
-        color: #ECC046; }
+        color: #05d362; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -210,6 +210,36 @@ main {
   padding: 0.5rem;
   border-left: #FF6501 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #F5F7ED solid;
+    border-radius: 15%; }
+    .projects img:hover {
+      border-color: #FF6501;
+      transition: all 0.7s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px #474747 solid;
+  margin-bottom: 0.3rem;
+  border-radius: 20%; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #FF6501;
+    color: set-text-color #FF6501; }
+
+.btn-dark {
+  background: black;
+  color: #F5F7ED; }
+
+.btn-light {
+  background-color: #004D3A;
+  color: #F5F7ED; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -218,10 +248,14 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); }
   .my-image {
     width: -webkit-fill-available; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); }
   .my-image {
     width: -webkit-fill-available; } }
 
@@ -255,8 +289,12 @@ main {
       height: 200px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 480px) {
+  .projects {
+    grid-template-columns: 1fr; }
   main#home h1 {
     margin-top: 10vh; } }
