@@ -65,19 +65,19 @@
     }
 }
 
-// Menu overlay
+// animated Menu overlay
 
 .menu {
     position: fixed;
     top: 0;
     width: 100%;
-    // opacity: 0.9;
     visibility: hidden;
 
     &.show {
-        visibility: visible;
+        visibility: visible; // when button is clicked the menu is visible
     }
 
+    // &- works instead of .menu-branding
     &-branding,
     &-nav {
         display: flex;
@@ -93,8 +93,9 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: darken($primary-color, 6);
         list-style: none; // no bullet points
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d ... translate3d docs
         transform: translate3d(0, -100%, 0); // have darker overlay come in from top (overlay with links).
         @include easeOut;
 

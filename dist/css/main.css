@@ -50,7 +50,7 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #070826;
+    background: #060721;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.7s ease-out; }
@@ -174,37 +174,28 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
+.p-bio {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em; }
+
 .about-info {
   display: grid;
-  grid-gap: 30px;
-  /* create space between */
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-gap: 20px;
+  grid-template-areas: 'bioimage bio bio bio' 'bioimage1 bio bio bio';
+  grid-template-columns: repeat(4, 2fr); }
 
-.bio-image {
+.bio-image,
+.bio-image1 {
   grid-area: bioimage;
   height: 300px;
-  margin: auto;
+  max-width: 300px;
+  margin: inherit;
+  margin-top: 24px;
   border-radius: 20%;
   border: #004D3A 3px solid; }
 
 .bio {
-  grid-area: bio;
-  font-size: 1.5rem; }
-
-.job-1 {
-  grid-area: job1; }
-
-.job-2 {
-  grid-area: job2; }
-
-.job-3 {
-  grid-area: job3; }
-
-.job {
-  background: #0f1050;
-  padding: 0.5rem;
-  border-left: #FF6501 5px solid; }
+  grid-area: bio; }
 
 #redface {
   width: 20vh;
@@ -220,8 +211,14 @@ main {
     border: 3px #F5F7ED solid;
     border-radius: 15%; }
     .projects img:hover {
+      opacity: 0.5;
       border-color: #FF6501;
       transition: all 0.7s ease-out; }
+
+h5 {
+  text-align: center;
+  color: #FF6501;
+  line-height: 1; }
 
 .box-inputs {
   color: #FF6501; }
@@ -246,19 +243,41 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.btn, .btn-dark, .btn-light {
+#contact-page-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.btn, .btn-dark, .btn-tube, .btn-res, .btn-light {
   display: inline-block;
   padding: 0.5rem 1rem;
   border: 1px #474747 solid;
   margin-bottom: 0.3rem;
   border-radius: 20%; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .btn-dark:hover, .btn-tube:hover, .btn-res:hover, .btn-light:hover {
     background: #FF6501;
     color: set-text-color #FF6501; }
 
 .btn-dark {
   background: black;
   color: #F5F7ED; }
+
+.btn-tube {
+  border: 1px #F5F7ED solid;
+  background: #c4302b;
+  color: #F5F7ED; }
+  .btn-tube:hover {
+    background: #f8413a;
+    color: set-text-color #FF6501; }
+
+.btn-res {
+  border: 1px #F5F7ED solid;
+  background: #051537;
+  color: #F5F7ED; }
+  .btn-res:hover {
+    background: #0458AB;
+    color: set-text-color #FF6501; }
 
 .btn-light {
   background-color: #004D3A;
@@ -273,7 +292,7 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background-color: #3b1800;
+  background-color: #004D3A;
   color: #F5F7ED;
   height: 60px; }
 
